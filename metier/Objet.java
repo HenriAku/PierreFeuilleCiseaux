@@ -1,4 +1,7 @@
-
+/********************************
+ * @author HenriAku             *
+ * description : Jeu du morpion *
+ *******************************/
 
 public class Objet 
 {
