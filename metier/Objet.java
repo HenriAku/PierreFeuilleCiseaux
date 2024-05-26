@@ -2,6 +2,7 @@
  * @author HenriAku             *
  * description : Jeu du morpion *
  *******************************/
+package metier;
 
 public class Objet 
 {

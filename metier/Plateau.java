@@ -2,6 +2,8 @@
  * @author HenriAku             *
  * description : Jeu du morpion *
  *******************************/
+package metier;
+import metier.Objet;
 
 public class Plateau 
 {
@@ -12,7 +14,6 @@ public class Plateau
 	{
 		this.objetJ = new Objet();
 		this.objetB = new Objet();
-		System.out.println("---->");
 	}
 
 	public String lancerPartie()

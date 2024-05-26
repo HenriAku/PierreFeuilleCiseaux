@@ -1,3 +1,5 @@
+package metier;
+import metier.Plateau;
 
 public class Test 
 {
