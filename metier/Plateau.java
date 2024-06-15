@@ -10,11 +10,24 @@ public class Plateau
 	private Objet objetJ;
 	private Objet objetB;
 
+	private int   ptJ;
+	private int	  ptB;
+
 	public Plateau()
 	{
 		this.objetJ = new Objet();
 		this.objetB = new Objet();
+
+		this.ptJ	= 0;
+		this.ptB	= 0;
 	}
+
+	//Getteur
+	public String getObjetJ(){return this.objetJ.getType();}
+	public String getObjetB(){return this.objetB.getType();}
+	public int	  getPtJ   (){return this.ptJ;}
+	public int	  getPtB   (){return this.ptB;}
+
 
 	public String lancerPartie()
 	{
@@ -36,7 +49,7 @@ public class Plateau
 		{
 			case 1 -> this.objetB.setType("ciseaux");
 			case 2 -> this.objetB.setType("feuille");
-			case 3 -> this.objetB.setType("piere");
+			case 3 -> this.objetB.setType("pierre" );
 		}
 	}
 
@@ -46,9 +59,11 @@ public class Plateau
 			this.objetJ.getType().equals("pierre" ) && this.objetB.getType().equals("ciseaux" )||
 			this.objetJ.getType().equals("feuille") && this.objetB.getType().equals("pierre"  ) )
 		{
+			this.ptJ++;
 			return "vous avez gagnez";
 		}else
 		{
+			this.ptB++;
 			return "vous avez perdus";
 		}
 	}

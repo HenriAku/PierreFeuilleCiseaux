@@ -3,6 +3,7 @@ package controleur;
 import ihm.PanelBtn;
 import ihm.FrameJeu;
 import metier.Plateau;
+import metier.Objet;
 
 public class Controleur 
 {
@@ -13,9 +14,12 @@ public class Controleur
 	public Controleur()
 	{
 		this.frame   = new FrameJeu(this);
-		this.panel   = new PanelBtn(this);
+		this.panel   = new PanelBtn(this,frame);
 		this.plateau = new Plateau ();
 	}
+
+	public Plateau getPlateau(){return this.plateau;}
+
 
 	public void jouer(String type)
 	{

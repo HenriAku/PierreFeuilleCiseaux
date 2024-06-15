@@ -19,10 +19,8 @@ public class FrameJeu extends JFrame
 		this.setSize(880, 487);
 
 		
-
-		
 		this.ctrl = ctrl;
-		this.panel = new PanelBtn(ctrl);
+		this.panel = new PanelBtn(ctrl, this);
 
 		this.add(panel);
 		
@@ -31,6 +29,8 @@ public class FrameJeu extends JFrame
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
+
+	public void majIhm(){this.repaint();}
 
 	public static void main(String[] args) 
 	{
